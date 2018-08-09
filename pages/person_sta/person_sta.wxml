@@ -1,0 +1,37 @@
+<!--pages/person_sta/person_sta.wxml-->
+<loading hidden="{{ loadingHidden }}">
+    加载中...
+</loading>
+<view class="title">
+  <image src="{{ImgUrl}}" class="ImgUrl"></image>
+  <view class="number">
+    <text>{{monthArray.AVG_STEP_MONTH}}</text>
+    <text>{{monthArray.SUM_STEP_MONTH}}</text>
+    <text>{{totalArray.AVG_STEP}}</text>
+    <text>{{totalArray.SUM_STEP}}</text>
+  </view>
+  <view class="statistics">
+    <text></text>
+    <text></text>
+    <text></text>
+    <text></text>
+  </view>
+</view>
+<view class="center_box">
+  <text>月平均步数</text>
+  <text>月总计步数</text>
+  <text>总平均步数</text>
+  <text>总计步数</text>
+</view>
+<view class="HistoryStep" wx:for="{{stepArray}}" wx:for-index="idx">
+  <view class="Steptime">
+    <text class="time_left">{{DataDay[idx]}}</text>
+    <text class="time_right"> <text style="color:#3be790;font-size:44rpx;">{{stepArray[idx].todaystep}}</text> 步</text>
+  </view>
+   <image src="../../image/per_border.png" class="border"></image> 
+  <view class="Steptext">
+    <text class="text_left">{{DataText[idx]}}</text>
+    <text class="text_right">{{DataText2[idx]}}</text>
+    <image src="{{DataImage[idx]}}"></image>
+  </view>
+</view>

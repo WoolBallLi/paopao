@@ -1,0 +1,61 @@
+/* pages/dynamic/dynamic.wxss */
+.box{
+  overflow: hidden;
+  border-bottom: 2rpx solid #E5E5E5
+}
+textarea{
+  height: 200rpx;
+  width: 100%;
+  
+  padding-top:44rpx;
+  box-sizing: border-box;
+  padding-left: 40rpx;
+  font-size: 32rpx; 
+}
+.list{
+  padding-left: 54rpx;
+}
+.list .img{
+  height: 160rpx;
+  width: 160rpx;
+  margin-bottom: 16rpx;
+  float: left;
+}
+.list .img:nth-of-type(1){
+  margin-right: 80rpx;
+}
+.list .img:nth-of-type(2){
+  margin-right: 80rpx;
+}
+.list .img:nth-of-type(4){
+  margin-right: 80rpx;
+}
+.list .img:nth-of-type(5){
+  margin-right: 80rpx;
+}
+
+.camera{
+  height: 160rpx;
+  width: 160rpx;
+  background-color: #EFEBEB;
+  
+  box-sizing: border-box;
+  margin-bottom: 16rpx;
+  float: left;
+}
+.camera .camera_logo{
+  height: 48rpx;
+  width: 58rpx;
+  margin-left: 52rpx;
+  margin-top: 58rpx;
+}
+button{
+  height: 94rpx;
+  width: 670rpx;
+  margin-top: 118rpx;
+  margin-left: 40rpx;
+  background-color: #1aad19;
+  border-radius: 20rpx;
+  font-size: 40rpx;
+  color: #fff;
+}

@@ -1,0 +1,77 @@
+<!--pages/oth_dynamic/oth_dynamic.wxml-->
+<view class="d_mark" hidden="{{hidden_d}}" bindtap="d_marks">
+  <view class="d_box" catchtap="d_box">
+    <text class="d_title">为TA加油充能</text>
+    <view class="d_name" style="margin-bottom:12rpx;">
+      <text class="{{color1}}">矿泉水</text>
+      <text style="margin-left:78rpx;margin-right:82rpx" class="{{color2}}">能量饮料</text>
+      <text class="{{color3}}">可口可乐</text>
+    </view>
+    <view class="d_image" style="margin-bottom:23.6rpx">
+      <image id="{{color1}}" src="../../image/e_drink1.png" style="height:98rpx;width:36rpx;margin-left:30rpx;" bindtap="d_border1" data-money="10"></image>
+      <image id="{{color2}}" src="../../image/e_drink2.png" style="height:101rpx;width:36rpx;margin:0 148rpx;" bindtap="d_border2" data-money="50"></image>
+      <image id="{{color3}}" src="../../image/e_drink3.png" style="height:94rpx;width:51.8rpx;" bindtap="d_border3" data-money="80"></image>
+    </view>
+    <view class="d_money" style="margin-bottom:68rpx;">
+      <text class="{{color1}}">￥0.1</text>
+      <text class="{{color2}}" style="margin-left:127rpx;margin-right:107rpx">￥0.5</text>
+      <text class="{{color3}}">￥0.8</text>
+    </view>
+    <view class="d_name" style="margin-bottom:27rpx;">
+      <text class="{{color4}}">运动衣</text>
+      <text class="{{color5}}" style="margin-left:99rpx;margin-right:107rpx">运动鞋</text>
+      <text class="{{color6}}">自行车</text>
+    </view>
+    <view class="d_image" style="margin-bottom:23.6rpx;overflow:hidden;">
+      <image class="{{color4}}" id="{{d_border4}}"  src="../../image/e_drink4.png" style="height:75.4rpx;width:85.6rpx;float:left;margin-top:11rpx;" bindtap="d_border4" data-money="200"></image>
+      <image class="{{color5}}" id="{{d_border5}}" src="../../image/e_drink5.png" style="height:55.6rpx;width:112.8rpx;margin-left:106.4rpx;margin-right:51.2rpx;float:left;margin-top:19.4rpx;" bindtap="d_border5" data-money="800"></image>
+      <image class="{{color6}}" id="{{d_border6}}" src="../../image/e_drink6.png" style="height:86rpx;width:152rpx;float:left;" bindtap="d_border6" data-money="1800"></image>
+    </view>
+    <view class="d_money" style="margin-bottom:20rpx;">
+      <text class="{{color4}}" style="margin-left:4rpx">￥2</text>
+      <text class="{{color5}}" style="margin-left:147.2rpx;margin-right:134rpx">￥8</text>
+      <text class="{{color6}}">￥18</text>
+    </view>
+    <button class="d_button" bindtap="pay">赠送</button>
+  </view>
+</view>
+<view class="user_circle" wx:for="{{array}}" wx:for-index="idx">
+  <view style="overflow:hidden">
+    <image src="{{array[idx].avatarUrl}}" class="userId"  data-oid="{{array[idx].openId}}" bindtap="person"></image>
+    <text class="userName">{{array[idx].nickName}}</text>
+    <image src="{{gender[idx]}}" class="gender"></image>
+    <text class="time">{{dates[idx]}} {{hour[idx]}}</text>
+  </view>
+  <view class="textpage">{{trackTxt[idx]}}</view>
+  <view class="textImage">
+      <image mode="aspectFill"  wx:for="{{tPic[idx]}}" data-tID="{{array[idx].trackID}}" wx:for-index="idxx" src="{{tPic[idx][idxx]}}" data-imgurl="{{tPic[idx][idxx]}}" bindtap="lookimg"></image> 
+  </view>
+  <view class="Icon">
+    <view class="Icon_right">
+      <view class="d_markBox" catchtap="d_mark" data-name="{{array[idx].trackID}}" data-oid="{{array[idx].openId}}"></view>
+      <view class="f_markBox" bindtap="flower" data-name="{{array[idx].trackID}}" data-flag="{{flower[idx]}}"></view>
+      <image src="../../image/drink.png" data-name="{{array[idx].trackID}}" data-oid="{{array[idx].openId}}"></image>
+      <image src="{{flowerUrl[idx]}}" data-name="{{array[idx].trackID}}" data-flag="{{flower[idx]}}" wx:if="{{flower[idx]}}"></image>
+      <image src="https://26323739.xiaochengxulianmeng.com/swiper/FLOWF.png" bindtap="flower" data-name="{{array[idx].trackID}}" data-flag="{{flower[idx]}}" wx:elif="{{!flower[idx]}}"></image>
+      <button style="border: none; padding:0;" plain="true" open-type="share" data-tID="{{array[idx].trackID}}" bindtap="share">
+        <image src="../../image/_share.png" data-name="{{array[idx].trackID}}"></image>
+      </button>
+    </view>
+  </view>
+  <view class="praise">
+    <image src="../../image/flower1.png" class="flo" ></image>
+    <image wx:for="{{flowerUserImg[idx]}}" wx:for-index="FUIidx" bindtap="person" src="{{flowerUserImg[idx][FUIidx]}}" class="userOid" data-oid="{{uflowerArray[idx][FUIidx].openId}}"></image>
+  </view>
+
+  <view class="reply">
+    <view style="margin-bottom:8rpx;" wx:for="{{CommtShow[idx]}}" wx:for-index="coidx">
+      <text class="username" data-oid="{{CommtShow[idx][coidx].openId}}" bindtap="person">{{CommtShow[idx][coidx].nickName}}</text>:
+      <text class="un_reply">{{comText[idx][coidx]}}</text>
+    </view>
+    <input id="{{trackID[idx]}}"  class="write" placeholder="评论" type="text" confirm-type="send" bindconfirm="send" bindblur="sendblur" value="{{sendValue}}"/>
+  </view>
+  <view class="flower_mark" hidden="{{hidden_flo}}" bindtap="mark">
+  <text>送人鲜花，手有余香</text>
+    <image src="../../image/big_flower.png"></image>
+  </view>
+</view>

@@ -1,0 +1,160 @@
+/* pages/GroupData/GroupData.wxss */
+page{
+  background-color: #E9E9E9;
+}
+.myself{
+  height: 244rpx;
+  position: relative;
+}
+.myself .myImg{
+  height: 100rpx;
+  width: 100rpx;
+  border-radius: 100%;
+  position: absolute;
+  top: 60rpx;
+  left: 52rpx;
+}
+.myself .mystep{
+  font-size: 28rpx;
+  line-height: 40rpx;
+  position: absolute;
+  top: 80rpx;
+  left: 166rpx;
+}
+.myself .mystep_num{
+  font-size: 52rpx;
+  color: #24c789;
+  line-height: 48rpx;
+  position: absolute;
+  top: 132rpx;
+  left: 166rpx;
+}
+.myself .share{
+  padding: 0;
+  position: absolute;
+  top: 80rpx;
+  right: 30rpx;
+  border-radius: 0;
+}
+.myself .clear{
+  font-size: 24rpx;
+  line-height: 24rpx;
+  color: #898989;
+  position: absolute;
+  top: 190rpx;
+  right: 24rpx;
+}
+.clearMask{
+  height: 60rpx;
+  width: 140rpx;
+  position: absolute;
+  top: 170rpx;
+  right: 24rpx; 
+}
+.myself .share image{
+  height: 30rpx;
+  width: 26rpx;
+  margin-right: 11.2rpx;
+  float: left;
+}
+.myself .share text{
+  float: left;
+  color: #F7931B;
+  font-size: 24rpx;
+  line-height: 24rpx;
+  margin-top: 2rpx;
+}
+.GroupRank{
+  background-color: #fff;
+  min-height: 960rpx;
+}
+
+.GroupData{
+  height: 128rpx;
+  box-sizing: border-box;
+  border-bottom: 2rpx solid #ECEBEB;
+  background-color: #FFF;
+  position: relative;
+}
+.lovemask{
+  height: 90rpx;
+  width: 50rpx;
+   /* background-color:#000;  */
+  position: absolute;
+  top:25rpx;
+  left:679rpx;
+  z-index:2;
+}
+.bgcolor{
+  background-color: #FAF7F7;
+}
+.GroupData text{
+  position: absolute;
+}
+.GroupData image{
+  position: absolute;
+}
+.GroupData .Group_medal{
+  height: 56rpx;
+  width: 40rpx;
+  top: 36rpx;
+  left: 30rpx;
+
+}
+.GroupData .Group_userImg{
+  height: 80rpx;
+  width: 80rpx;
+  border-radius: 100%;
+  top: 24rpx;
+  left: 86rpx;
+}
+.GroupData .Group_name{
+  font-size: 32rpx;
+  line-height: 44rpx;
+  top: 42rpx;
+  left: 184rpx;
+}
+.GroupData .Group_distance{
+  height: 24rpx;
+  width: 20rpx;
+  top: 95rpx;
+  left: 194rpx;
+}
+.GroupData .Group_dNum{
+  font-size: 24rpx;
+  line-height: 28rpx;
+  color: #B0B0B0;
+  top: 93rpx;
+  left: 224rpx;
+}
+.GroupData .Group_step{
+  font-size: 44rpx;
+  line-height: 58rpx;
+  top: 38rpx;
+  right: 114rpx;
+  color: #22B022;
+}
+.GroupData .Group_loveNum{
+  font-size: 30rpx;
+  line-height: 40rpx;
+  top: 22rpx;
+  right: 30rpx;
+  color: #B0B0B0;
+  text-align: center;
+  display: block;
+  width: 36rpx;
+  height: 40rpx;
+}
+.GroupData .Group_loveImg{
+  height: 28rpx;
+  width: 32rpx;
+  top: 78rpx;
+  right: 30rpx;
+}
+.GroupData .Group_RankNum{
+  top: 46rpx;
+  left: 30rpx;
+  font-size: 36rpx;
+  line-height: 36rpx;
+  color: #171717;
+}

@@ -1,0 +1,36 @@
+<!--pages/other_personal/o_personal.wxml-->
+<loading hidden="{{ loadingHidden }}">
+    加载中...
+</loading>
+<view class="header">
+  <image src="{{avatarUrl}}" class="maskimg"></image>
+  <view class="userID">
+    <image src="{{array[0].avatarUrl}}" class="userImg"></image>
+    <view class="per_username">{{array[0].nickName}}</view>
+    <view class="city">{{array[0].address}}</view>
+  </view>
+  <view class="flower">
+    <image src="../../image/per_flower.png"></image>
+    <text class="page">收到了 <text style="color:#FE6767;font-size:32rpx">{{array[0].flowNum}}</text> 支鲜花</text>
+  </view>
+</view>
+<view class="main">
+    <text class="kg_num" bindtap="runData" data-oid="{{oid}}">{{array[0].TotalMileage}}</text>
+    <text class="kg" >公里</text>
+    <view style="float:right;margin-top:66rpx;margin-right:30rpx;">
+      <text class="day_num" bindtap="SportDay" data-oid="{{oid}}">{{array[0].TotalSportDays}}</text>
+      <text class="day">天</text>
+    </view>
+    <view class="leiji">累计运动</view>
+</view>
+<view class="myDynamics">
+  <text>TA的动态</text>
+  <view class="dynamics_num" bindtap="oth_dynamic" data-oid="{{oid}}">
+    <text>{{num}}</text>
+    <image src="../../image/per_rig.png" ></image>
+  </view>
+  <scroll-view scroll-x="true"   style="white-space: nowrap; display: flex overflow:auto" >
+    <image mode="aspectFill" src="{{dy_Img[index]}}" class="ImgUrl"  wx:for="{{dy_Img}}" data-tID="{{trackID[index]}}" bindtap="lookDY" ></image> 
+  </scroll-view>
+</view>
+

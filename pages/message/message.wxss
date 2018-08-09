@@ -1,0 +1,86 @@
+/* message.wxss */
+page{
+  background-color: #fafafa;
+  height: 100%;
+  width: 100%;
+}
+.datamark{
+  overflow: hidden;
+}
+.datamark .datatext {
+  width: 100%;
+  text-align: center;
+  font-size: 60rpx;
+  color: #c3c2c2;
+  margin-top: 258rpx;
+  margin-bottom: 88rpx;
+}
+.datamark .dataImg{
+   height: 268rpx;
+   width: 474rpx;
+   margin-left: 126rpx;
+ }
+.main{
+  position: relative;
+  overflow: hidden;
+}
+.main .systemsImg{
+  height: 100rpx;
+  width: 100rpx;
+  border-radius: 100%;
+  position: absolute;
+  top: 72rpx;
+  left: 30rpx;
+}
+.main .systemsName{
+  font-size: 28rpx;
+  line-height: 28rpx;
+  color: #646464;
+  position: absolute;
+  left: 170rpx;
+  top: 96rpx;
+}
+.main .sj{
+  height: 28rpx;
+  width: 26rpx;
+  position: absolute;
+  top: 203rpx;
+  left: 170rpx;
+}
+.textmain{
+  width: 504rpx;
+  background-color: #E8E8E8;
+  border-radius: 20rpx;
+  margin-left: 196rpx;
+  margin-top: 156rpx;
+  margin-bottom: 20rpx;
+  padding: 46rpx;
+  box-sizing: border-box;
+}
+.only{
+  margin-bottom: 28rpx;
+}
+.only .textImg{
+  height: 458rpx;
+  width: 412rpx;
+  background-color: #f00;
+}
+.other{
+  margin-bottom: 28rpx;
+}
+.other .o_img{
+  height: 227rpx;
+  width: 204rpx;
+  background-color: #8e8e8e;
+}
+.other .o_img:nth-of-type(1){
+  margin-right: 4rpx;
+}
+.other .o_img:nth-of-type(3){
+   margin-right: 4rpx;
+}
+.text{
+  font-size: 28rpx;
+  color: #515050;
+  line-height: 28rpx;
+}

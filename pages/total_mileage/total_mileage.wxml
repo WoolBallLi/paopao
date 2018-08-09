@@ -1,0 +1,40 @@
+<!--pages/total_mileage/total_mileage.wxml-->
+<loading hidden="{{ loadingHidden }}">
+    加载中...
+</loading>
+<view class="title">
+  <image class="titlebg" src="{{ImgUrl}}"></image>
+  <view class="mask"></view>
+  <view class="t_winer">
+    <image src="{{array[0].avatarUrl}}" class="{{first}}" data-oid="{{array[0].openId}}" bindtap="userInfo"></image>
+    <text>{{array[0].nickName}}</text>
+    <text>达到了顶峰</text>
+  </view>
+  <image src="../../image/w_share.png" class="w_shareimg"></image>
+  <button class="w_share" open-type="share" plain="true" style="border:none;">邀请好友</button>
+</view>
+<view class="myself" >
+  <image src="{{my_Img}}" class="myImg" data-oid="{{openId}}" bindtap="userInfo"></image>
+  <text class="me" >我</text>
+  <text class="myNum">{{my_num}}</text>
+  <text class="myStep">{{my_Mileage}}</text>
+</view>
+<view class="other">
+  <view class="o_self" wx:for="{{winImg}}" wx:for-index="o_idx">
+    <image src="{{winImg[o_idx]}}" class="o_num"></image>
+    <image src="{{array[o_idx].avatarUrl}}" class="o_Img" data-oid="{{array[o_idx].openId}}" bindtap="userInfo"></image>
+    <text class="o_name" >{{array[o_idx].nickName}}</text>
+    <image src="../../image/w_locate.png" class="o_distance"></image>
+    <text class="o_d_num">{{distance[o_idx]}}</text>
+    <text class="o_Step">{{array[o_idx].totalMileage}}</text>
+  </view>
+  <view class="o_self" wx:for="{{array.length-3}}" wx:for-index="idx">
+    <text class="o_t_num">{{idx+4}}</text>
+    <image src="{{array[idx+3].avatarUrl}}" class="o_Img" data-oid="{{array[idx+3].openId}}" bindtap="userInfo"></image>
+    <text class="o_name" >{{array[idx+3].nickName}}</text>
+    <image src="../../image/w_locate.png" class="o_distance"></image>
+    <text class="o_d_num">{{distance[idx+3]}}</text>
+    <text class="o_Step">{{array[idx+3].totalMileage}}</text>
+
+  </view>
+</view>

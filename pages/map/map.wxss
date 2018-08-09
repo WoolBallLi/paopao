@@ -1,0 +1,92 @@
+/* pages/map/map.wxss */
+page{
+   background-color: #E9E9E9; 
+}
+.box{
+  font-family: "宋体";
+  color:#030303;
+  position: relative;
+  margin-top: 20rpx;
+  background: #fff;
+  height: 348rpx;
+}
+.color{
+  color: #41E8A1; 
+}
+.km{
+  height: 142rpx;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.speed{
+  margin-left: 60rpx;
+  text-align: center;
+}
+.speed .speed_num{
+  margin-bottom: 20rpx;
+}
+.speed .speed_num .cen{
+  font-size: 30rpx;
+}
+.button{
+  height: 160rpx;
+  width: 160rpx;
+  border-radius: 50%;
+  line-height: 160rpx;
+  font-size: 40rpx;
+  background-color: #7CF2E3;
+  color: #fff;
+  position: absolute;
+  left: 296rpx;
+  box-shadow: 0 4rpx 8rpx #7CF2E3;
+  
+}
+.button image{
+  height: 76rpx;
+  width: 58rpx;
+  margin-left: 55rpx;
+  margin-top: 40rpx;
+}
+.sharing{
+  width: 200rpx;
+  height: 76rpx;
+  background-color: #41E8A1;
+  position: absolute;
+  top: 174rpx;
+  left: 265rpx;
+  box-shadow: 0 4rpx 8rpx #41E8A1;
+  text-align: center;
+  line-height: 76rpx;
+  color: #ffffff;
+  border-radius: 8rpx;
+  border:none;
+  padding: 0;
+}
+.time{
+  float: right;
+  font-size: 52rpx; 
+  text-align: center;
+  margin-right: 60rpx;
+}
+.time .time_name{
+  margin-top: 20rpx;  
+}
+.stop{
+  height: 80rpx;
+  width: 80rpx;
+  position: absolute;
+  top: 20rpx;
+  left: 30rpx;
+  background-color: #ff5166;
+  border-radius: 100%;
+}
+.stop .stop_b{
+  height: 30rpx;
+  width: 30rpx;
+  background-color: #ffffff;
+  border-radius: 8rpx;
+  margin-left: 26rpx;
+  margin-top: 25rpx;
+}

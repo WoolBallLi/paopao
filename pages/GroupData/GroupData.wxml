@@ -1,0 +1,36 @@
+<!--pages/GroupData/GroupData.wxml-->
+<view class="myself">
+  <image src="{{Person.avatarUrl}}" class="myImg"></image>
+  <view class="mystep">{{Mystep}}</view>
+  <view class="mystep_num">{{Person.todaystep}}</view>
+  <button class="share" style="border:none" plain open-type="share">
+    <image src="../../image/Groupshare.png"></image>
+    <text>发起新挑战</text> 
+  </button>
+  <view class="clear" >清除群记录</view>
+  <view class="clearMask" bindtap="clearGroup"></view>
+</view>
+<view class="GroupRank">
+  <view class="GroupData {{bgcolor[wIdx]}}" wx:for="{{G_medalimg}}" wx:for-index="wIdx"> 
+    <view class="lovemask" bindtap="lovemask" data-oid="{{NewGdata[wIdx].openId}}"></view>
+    <image src="{{G_medalimg[wIdx]}}" class="Group_medal"></image>
+    <image src="{{NewGdata[wIdx].avatarUrl}}" class="Group_userImg" data-oid="{{NewGdata[wIdx].openId}}" bindtap="userInfo"></image>
+    <text class="Group_name">{{NewGdata[wIdx].nickName}}</text>
+    <image src="../../image/w_locate.png" class="Group_distance"></image>
+    <text class="Group_dNum">{{distance[wIdx]}}</text>
+    <text class="Group_step">{{NewGdata[wIdx].todaystep}}</text>
+    <text class="Group_loveNum">{{LoveArray_num[wIdx]}}</text>
+    <image src="{{LoveArray_img[wIdx]}}" class="Group_loveImg"  data-oid="{{NewGdata[wIdx].openId}}" bindtap="love"></image>
+  </view>
+  <view class="GroupData {{bgcolor[idx+3]}}" wx:for="{{loser}}" wx:for-index="idx" >
+    <view class="lovemask" bindtap="lovemask" data-oid="{{loser[idx].openId}}"></view>
+    <text class="Group_RankNum" >{{idx+4}}</text>
+    <image src="{{loser[idx].avatarUrl}}" class="Group_userImg" data-oid="{{loser[idx].openId}}" bindtap="userInfo"></image>
+    <text class="Group_name">{{loser[idx].nickName}}</text>
+    <image src="../../image/w_locate.png" class="Group_distance"></image>
+    <text class="Group_dNum">{{distance[idx+3]}}</text>
+    <text class="Group_step">{{loser[idx].todaystep}}</text>
+    <text class="Group_loveNum">{{LoveArray_num[idx+3]}}</text>
+    <image src="{{LoveArray_img[idx+3]}}" data-oid="{{loser[idx].openId}}" class="Group_loveImg" bindtap="love"></image>  
+  </view>
+</view>

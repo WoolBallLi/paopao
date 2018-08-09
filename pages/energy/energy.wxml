@@ -1,0 +1,39 @@
+<!--pages/energy/energy.wxml-->
+<view class="energy_logo">
+  <image src="../../image/energy.png"></image>
+  <image src="../../image/eney.png"></image>
+</view>
+<view class="energy_img">
+  <view class="energy_box">
+    <image src="../../image/e_drink1.png"></image>
+    <image src="../../image/cha.png" class="cha"></image>
+    <text class="drinl_n1">{{num.totalwater}}</text>
+  </view>
+  <view class="energy_box">
+    <image src="../../image/e_drink3.png"></image>
+    <image src="../../image/cha.png" class="cha"></image>
+    <text class="drinl_n3">{{num.totalcola}}</text>
+  </view>
+  <view class="energy_box">
+    <image src="../../image/e_drink2.png"></image>
+    <image src="../../image/cha.png" class="cha"></image>
+    <text class="drinl_n2">{{num.totaldrinks}}</text>
+  </view>
+  
+  <view class="energy_box">
+    <image src="../../image/e_drink4.png"></image>
+    <image src="../../image/cha.png" class="cha"></image>
+    <text class="drinl_n4">{{num.totalclothes}}</text>
+  </view>
+  <view class="energy_box">
+    <image src="../../image/e_drink5.png"></image>
+    <image src="../../image/cha.png" class="cha"></image>
+    <text class="drinl_n5">{{num.totalshoes}}</text>
+  </view>
+  <view class="energy_box">
+    <image src="../../image/e_drink6.png"></image>
+    <image src="../../image/cha.png" class="cha"></image>
+    <text class="drinl_n6">{{num.totalbike}}</text>
+  </view> 
+</view>
+<view class="e_embody" bindtap="energy">能量提取</view>

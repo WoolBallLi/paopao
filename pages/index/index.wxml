@@ -1,0 +1,78 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="usermotto">
+    <view class="marklogo" hidden="{{hidden}}"></view>
+    <image class="bg" src="{{indexBg}}"></image>
+    <view class="bgmask"></view>
+    <swiper bindchange="swiper" current="0">
+      <swiper-item>
+        <view class="n_rank" bindtap="n_rank">
+          <text>附近排名</text>
+          <text>{{n_num}}</text>
+        </view>
+        <view class="cent">
+          <image class="c_babg" src="../../image/rectangle.png"></image>
+          <text class="c_text1">步数</text>
+          <text class="c_text2">{{run_num}}</text>
+          <image class="c_pec" src="../../image/go.png" style="width:40rpx;height:53.2rpx;top:308rpx;left: 160rpx;" bindtouchstart="touchstart" bindtouchmove="touchmove" bindtouchend="touchend"></image>
+        </view>
+        <view class="w_rank" bindtap="w_rank">
+          <text>世界排名</text>
+          <text>{{num}}</text>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view class="n_rank" bindtap="mon_mileage">
+          <text>月排名</text>
+          <text>{{mon_mileage}}</text>
+        </view>
+        <view class="cent">
+          <image class="c_babg" src="../../image/rectangle.png"></image>
+          <text class="c_text1">里程</text>
+          <text class="c_text2">{{mileage}}</text>
+          <text class="c_text3">公里</text>
+          <image class="c_pec" src="../../image/c_pec.png" style="width:46rpx;height:52rpx;top:308rpx;left: 148rpx;" bindtouchstart="touchstart" bindtouchmove="touchmove" bindtouchend="touchend"></image>
+        </view>
+        <view class="w_rank" bindtap="total_mileage">
+          <text>总排名</text>
+          <text>{{total_mileage}}</text>
+        </view>
+      </swiper-item>
+    </swiper>
+    <view class="title">
+      <text class="{{color2}}">健步</text><text class="{{color1}}">跑步</text>
+    </view>
+    <button class="rank" bindtap="map" hidden="{{hidden_1}}" style="border:none">开始跑步</button>
+    <button class="rank" id="rank" bindtap="group"  hidden="{{hidden_2}}" style="border:none" >查看群排行</button>
+    <view class="ty">
+      <image class="ty_babg" src="../../image/tuoyuan.png"></image>
+      <view class="user_img">
+        <image src="../../image/index1.png"></image>
+        <image src="../../image/index2.png"></image>
+        <image src="../../image/index3.png"></image>
+        <image src="../../image/index4.png"></image>
+      </view>
+    </view>
+    <view class="handpick">
+      <text class="span">达人精选</text>
+      <view class="handpickdata" hidden="{{hiddendata}}">正在加载数据...</view>
+      <view class="classname" style="overflow:hidden;background-color:#fafafa;margin-left:30rpx">
+        <view wx:for="{{array}}" style="float: left;margin-right:6rpx;margin-bottom:40rpx;" wx:for-index="idx">
+          <view class="hp_main">
+            <image src="{{userImg[idx]}}" bindtap="select" data-name="{{array[idx].trackID}}" mode="aspectFill"></image>
+            <view class="image"> </view>
+            <view class="mark">
+              <image src="../../image/flower.png" bindtap="misstap"></image>
+              <text class="step">{{array[idx].flowNumTotal}}</text>
+            </view>
+          </view>
+          <view class="user_img2">
+            <image src="{{array[idx].TrackShow[0].avatarUrl}}" data-oid="{{array[idx].TrackShow[0].openId}}" bindtap="person"></image>
+            <text class="user_id">{{array[idx].TrackShow[0].nickName}}</text>
+            <text class="user_span">{{trackText[idx]}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,33 @@
+<!--pages/com_demo/com_demo.wxml-->
+<loading hidden="{{ loadingHidden }}">
+    加载中...
+</loading>
+<view class="l_today" >
+  <view class="nar">今日竞赛</view>
+    <view class="main" wx:for="{{newArray}}" wx:for-index="idx" hidden="{{hidden_today}}">
+      <view class="me">
+        <image src="{{newArray[idx][0].avatarUrl}}" class="userImg float me_img"></image>
+        <text class="userId float me_name" >{{newArray[idx][0].nickName}}</text>
+        <text class="number float me_num" >{{newArray[idx][0].todaystep}}</text>
+        <text class="bu float me_bu">步</text>
+        <image src="../../image/con_logo.png" class="logo me_logo"></image>
+        <image src="../../image/me_bor.png" class="me_bor"></image> 
+      </view>
+      <image src="../../image/con_pk.png" class="con_pk"></image>
+      <view class="other">
+        <image src="{{newArray[idx][1].avatarUrl}}" class="userImg float other_img"></image>
+        <text class="userId float other_name" >{{newArray[idx][1].nickName}}</text>
+        <text class="number float other_num" >{{newArray[idx][1].todaystep}}</text>
+        <text class="bu float other_bu">步</text>
+        <image src="../../image/con_logo.png" class="logo other_logo"></image>
+        <image src="../../image/other_bor.png" class="other_bor"></image> 
+      </view>
+    </view>
+  <button style="border:none;" class="noDataBtn2" open-type="share" hidden="{{button}}" >继续挑战</button>
+   <view class="noDataBox" hidden="{{hiddendata}}">
+    <image src="../../image/nodataimg.png" class="nodata"></image>
+    <text class="noDataText">邀请好友加入好友竞赛</text>
+    <button style="border:none;" class="noDataBtn" open-type="share" >挑战好友</button>
+  </view> 
+</view>
+

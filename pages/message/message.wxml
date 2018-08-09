@@ -1,0 +1,22 @@
+<!-- message.wxml -->
+<view class="main" wx:for="{{array}}" wx:for-index="idx">
+ <!-- <view class="datamark">
+  <view class="datatext">空空如也</view> 
+  <image class="dataImg" src="../../image/messagedata.png"></image>
+ </view> -->
+ <view class="classname" style="overflow:hidden">
+  <image src="{{array[idx].adminPIC}}" class="systemsImg"></image>
+    <text class="systemsName">{{array[idx].adminName}}</text>
+    <image src="../../image/sj.png" class="sj"></image>
+    <view class="textmain">
+      <view class="only" wx:if="{{MTlength[idx]==1}}">
+        <image src="{{messImg[idx]}}" class="textImg"></image>
+      </view>
+       <view class="other" wx:else>
+        <image src="{{messImg[idx][Midx]}}" class="o_img" wx:for="{{messImg[idx]}}" wx:for-index="Midx"></image>
+      </view> 
+      <text class="text">{{array[idx].messTXT}}</text>
+    </view>
+ </view>
+  
+</view>

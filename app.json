@@ -1,0 +1,72 @@
+{
+  "pages":[
+    
+    
+    "pages/index/index",
+    "pages/message/message",
+    "pages/run_sta/run_sta",
+    "pages/group/group",
+    "pages/GroupData/GroupData",
+    "pages/w_ranking/w_ranking",    
+    "pages/person_sta/person_sta",    
+    "pages/n_ranking/n_ranking",
+    "pages/map/map",
+    "pages/energy/energy",
+    "pages/personal/personal",
+    "pages/my_dynamic/my_dynamic",
+    "pages/mon_mileage/mon_mileage",
+    "pages/dynamic/dynamic",
+    "pages/movement/movement",
+    "pages/total_mileage/total_mileage",
+    "pages/com_demo/com_demo",
+    "pages/other_personal/other_personal",
+    "pages/o_dynamic/o_dynamic",
+    "pages/mov_dynamic/mov_dynamic"
+    
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#313037",
+    "navigationBarTitleText": "运动",
+    "navigationBarTextStyle":"white",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color":"#929292",
+    "selectedColor":"#24db8d",
+    "backgroundColor":"#fff",
+    "borderStyle":"white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath":"image/s_index.png",
+        "selectedIconPath":"image/index.png"
+      },
+      {
+        "pagePath": "pages/com_demo/com_demo",
+        "text": "竞赛",
+        "iconPath": "image/competition.png",
+        "selectedIconPath": "image/s_competition.png"
+      },
+      {
+        "pagePath": "pages/dynamic/dynamic",
+        "text": "发布动态",
+        "iconPath": "image/dynamic.png",
+        "selectedIconPath": "image/s_dynamic.png"
+      },
+      {
+        "pagePath": "pages/movement/movement",
+        "text": "跑圈",
+        "iconPath": "image/movement.png",
+        "selectedIconPath": "image/s_movement.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "个人",
+        "iconPath": "image/personal.png",
+        "selectedIconPath": "image/s_personal.png"
+      }
+    ]
+  }
+}

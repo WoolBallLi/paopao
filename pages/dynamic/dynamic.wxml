@@ -1,0 +1,14 @@
+<!--pages/dynamic/dynamic.wxml-->
+<loading hidden="{{ loadingHidden }}">
+    {{loadingValue}}
+</loading>
+<view class="box">
+  <textarea placeholder="分享运动心得" maxlength="-1" bindinput="listenervalue" value="{{valuenow}}"/>
+  <view class="list">
+    <image mode="aspectFill" src="{{array[index]}}" class="img" wx:for="{{array}}"></image>
+    <view class="camera" bindtap="choose">
+      <image src="../../image/camera.png" class="camera_logo"></image>
+    </view> 
+  </view>
+</view>
+<button bindtap="btn">发表</button>

@@ -1,0 +1,36 @@
+<!--pages/run_sta/run_sta.wxml-->
+<loading hidden="{{ loadingHidden }}">
+    加载中...
+</loading>
+<view class="title">
+  <image src="{{ImgUrl}}" class="ImgUrl"></image>
+  <view class="number">
+    <text>{{monthSdata}}</text>
+    <text>{{monthArray.SUM_RUN_MONTH}}</text>
+    <text>{{totalSdata}}</text>
+    <text>{{totalArray.SUM_RUN}}</text>
+  </view>
+  <view class="statistics">
+    <text></text>
+    <text></text>
+    <text></text>
+    <text></text>
+  </view>
+</view>
+<view class="center_box">
+  <text>月平均公里</text>
+  <text>月总计公里</text>
+  <text>总平均公里</text>
+  <text>总计公里</text>
+</view>
+<view class="HistoryStep" wx:for="{{runArray}}" wx:for-index="idx">
+  <view class="Steptime">
+    <text class="time_left">{{runTime_Day[idx]}} {{runTime_Data[idx]}}</text>
+    <text class="time_right"><text style="color:#41EBA1;font-size:44rpx;line-height:44rpx;">{{runArray[idx].mileage}}</text> 公里</text>
+  </view>
+   <image src="../../image/per_border.png" class="border"></image> 
+  <view class="Steptext">
+    <text class="text_left">耗时<text style="margin-left:6rpx;"></text>{{consuming[idx]}}</text>
+    <text class="text_right">配速<text style="margin-left:6rpx;"></text>{{speed[idx]}}</text>
+  </view>
+</view>

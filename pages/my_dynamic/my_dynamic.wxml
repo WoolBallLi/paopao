@@ -1,0 +1,41 @@
+<!--pages/my_dynamic/my_dynamic.wxml-->
+<view class="classname" style="background-color:#e9e9e9">
+  <view class="user_circle" wx:for="{{array}}" wx:for-index = "idx">
+
+    <view style="overflow:hidden">
+      <image src="{{array[idx].avatarUrl}}" class="userId" data-oid="{{array[idx].openId}}" bindtap="person"></image>
+      <text class="userName">{{array[idx].nickName}}</text>
+      <image src="{{gender[idx]}}" class="gender"></image>
+      <text class="time">{{dates[idx]}} {{hour[idx]}}</text>
+    </view>
+    <view class="textpage">{{trackTxt[idx]}}</view>
+    <view class="textImage">
+        <image wx:for="{{arrPic[idx]}}" wx:for-index="idxpic" src="{{arrPic[idx][idxpic]}}" data-traid="{{array[idx].trackID}}" data-imgurl="{{arrPic[idx][idxpic]}}" bindtap="lookimg"></image> 
+    </view>
+    <view class="Icon">
+      <view class="Icon_right">
+        <image src="../../image/dian.png" bindtap="dian" class="dian" data-name="{{array[idx].trackID}}"></image>
+        <view class="dian_mask" hidden="{{flag[idx]}}">
+          <button style="border: none; padding:0;" plain="true" data-name="{{array[idx].trackID}}" open-type="share">
+            <image src="../../image/_share.png"></image>
+          </button>
+          <button style="border: none; padding:0;" plain="true" data-name="{{array[idx].trackID}}" bindtap="del">
+            <image src="../../image/del.png"></image>
+          </button>
+        </view>
+      </view>
+    </view>
+    <view class="praise">
+        <image src="../../image/flower1.png" class="flo" ></image>
+         <image mode="aspectFill"  wx:for="{{flowArrayImg}}" wx:for-index="fidx" src="{{flowArrayImg[idx][fidx]}}" bindtap="person" class="userOid" data-oid="{{flowArray[idx][fidx].openId}}"></image> 
+      </view>
+    <view class="reply">
+      <view style="margin-bottom:8rpx;" wx:for="{{CommtShow[idx]}}" wx:for-index="Cidx" >
+        <text class="username" bindtap="person" data-oid="{{CommtShow[idx][Cidx].openId}}">{{CommtShow[idx][Cidx].nickName}}</text>:
+        <text class="un_reply">{{comText[idx][Cidx]}}</text>
+      </view>
+      <input   class="write" placeholder="评论" type="text" confirm-type="send" bindconfirm="send" bindblur="sendblur" value="{{sendValue}}" data-tid="{{array[idx].trackID}}"/> 
+    </view>
+    </view>
+  <view class="Mask" hidden="{{hidden}}" bindtap="Mask"></view>
+</view>

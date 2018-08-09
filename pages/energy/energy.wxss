@@ -1,0 +1,136 @@
+/* pages/energy/energy.wxss */
+page{
+  height: 100%;
+  width: 100%;
+  background-color: #E9E9E9;
+}
+.energy_logo{
+  height: 315rpx;
+  position: relative;
+  overflow: hidden;
+}
+.energy_logo image:nth-of-type(1){
+  height: 272rpx;
+  width: 284rpx;
+  position: absolute;
+  top: 43rpx;
+  left: 234rpx;
+}
+.energy_logo image:nth-of-type(2){
+  height: 120rpx;
+  width: 274rpx;
+  position: absolute;
+  top: 11rpx;
+  right: 8rpx;
+}
+.energy_img{
+  height: 628rpx;
+  width: 690rpx;
+  margin-left: 30rpx;
+  border-radius:20rpx;
+  /* position: relative;   */
+}
+.energy_img image{
+  /* position: absolute; */
+}
+.energy_box{
+  height: 314rpx;
+  width: 230rpx;
+  background-color: #fff;
+  float: left;
+  box-sizing: border-box;
+  position: relative;
+}
+.energy_box text{
+  font-size: 60rpx;
+  color: #7a7a7a;
+  position: absolute;
+  top: 216rpx;
+  left: 118rpx;
+  
+}
+
+.energy_box image{
+  position: absolute;
+}
+
+.energy_box:nth-of-type(1){
+  border-radius:20rpx 20rpx 0 20rpx;
+  border-right:2rpx dashed #EFEFEF;
+  border-bottom:2rpx dashed #EFEFEF;    
+}
+.energy_box:nth-of-type(2){
+  border-radius:20rpx 20rpx 0 0;
+  border-right:2rpx dashed #EFEFEF;   
+  border-bottom:2rpx dashed #EFEFEF;    
+}
+.energy_box:nth-of-type(3){
+  border-bottom:2rpx dashed #EFEFEF;    
+  border-radius:20rpx 20rpx  20rpx 0; 
+}
+.energy_box:nth-of-type(4){
+  border-radius:20rpx 0 20rpx  20rpx; 
+  border-right:2rpx dashed #EFEFEF;   
+}
+.energy_box:nth-of-type(5){
+  border-right:2rpx dashed #EFEFEF;   
+  border-radius:0 0 20rpx  20rpx; 
+}
+.energy_box:nth-of-type(6){
+  border-radius:0 20rpx 20rpx 20rpx; 
+}
+.energy_box:nth-of-type(1) image{
+  height: 150rpx;
+  width: 56rpx;
+  top: 26rpx;
+  left: 88rpx;
+}
+.energy_box:nth-of-type(2) image{
+  height: 128rpx;
+  width: 72rpx;
+  top: 44rpx;
+  left: 78rpx;
+}
+.energy_box:nth-of-type(3) image{
+  height: 146rpx;
+  width: 52rpx;
+  top: 30rpx;
+  left: 90rpx;
+}
+.energy_box:nth-of-type(4) image{
+ height: 92rpx;
+  width: 104rpx;
+  top: 60rpx;
+  left: 62rpx;
+}
+.energy_box:nth-of-type(5) image{
+  height: 68rpx;
+  width: 134rpx;
+  top: 86rpx;
+  left: 48rpx;
+}
+.energy_box:nth-of-type(6) image{
+  height:94rpx;
+  width: 166rpx;
+  top: 60rpx;
+  left: 34rpx;
+}
+.energy_img .energy_box .cha{
+  height: 34rpx;
+  width: 34rpx;
+  top: 240rpx;
+  left: 66rpx;
+}
+.e_embody{
+  height: 88rpx;
+  width: 284rpx;
+  text-align: center;
+  line-height: 98rpx;
+  background-color: #fc6e51;
+  color: #fff;
+  font-size: 36rpx;
+  border-radius: 20rpx;
+  position: relative;
+  top: 60rpx;
+  left: 234rpx;
+}

@@ -1,0 +1,48 @@
+<!--pages/w_ranking/w_ranking.wxml-->
+<loading hidden="{{ loadingHidden }}">
+    加载中...
+</loading>
+<view class="title">
+  <image class="titlebg" src="{{ImgUrl}}"></image>
+  <view class="mask"></view>
+  <view class="t_winer">
+    <image src="{{array[0].avatarUrl}}" class="{{first}}" data-oid="{{array[0].openId}}" bindtap="userInfo"></image>
+    <text>{{array[0].nickName}}</text>
+    <text>达到了顶峰</text>
+  </view>
+  <image src="../../image/w_share.png" class="w_shareimg"></image>
+  <button class="w_share" open-type="share" plain="true" style="border:none;">邀请好友</button>
+</view>
+<view class="myself" >
+<view class="lovemask" bindtap="lovemask" data-oid="{{openId}}"></view>
+  <image src="{{my_img}}" class="myImg" data-oid="{{openId}}" bindtap="userInfo"></image>
+  <text class="me" >我</text>
+  <text class="myNum">{{my_num}}</text>
+  <text class="myStep">{{my_step}}</text>
+  <text class="loveNum">{{my_love_num}}</text>
+  <image src="{{my_loveImg}}" class="loveImg" data-oid="{{openId}}" bindtap="bindlove"></image>
+</view>
+<view class="other">
+  <view class="o_self" wx:for="123" wx:for-index="o_idx">
+    <view class="lovemask" bindtap="lovemask" data-oid="{{array[o_idx].openId}}"></view>
+    <image src="{{o_medalimg[o_idx]}}" class="o_num"></image>
+    <image src="{{o_userImg[o_idx]}}" class="o_Img" data-oid="{{array[o_idx].openId}}" bindtap="userInfo"></image>
+    <text class="o_name" >{{o_name[o_idx]}}</text>
+    <image src="../../image/w_locate.png" class="o_distance"></image>
+    <text class="o_d_num">{{o_distance[o_idx]}}</text>
+    <text class="o_Step">{{o_step[o_idx]}}</text>
+    <text class="loveNum">{{o_lover_num[o_idx]}}</text>
+    <image src="{{loveImg[o_idx]}}" class="loveImg" data-oid="{{array[o_idx].openId}}" bindtap="bindlove"></image>
+  </view>
+  <view class="o_self" wx:for="{{the_array}}" wx:for-index="idx">
+    <view class="lovemask" bindtap="lovemask" data-oid="{{the_array[idx].openId}}"></view>
+    <text class="o_t_num">{{idx+4}}</text>
+    <image src="{{the_array[idx].avatarUrl}}" class="o_Img" data-oid="{{the_array[idx].openId}}" bindtap="userInfo"></image>
+    <text class="o_name" >{{the_array[idx].nickName}}</text>
+    <image src="../../image/w_locate.png" class="o_distance"></image>
+    <text class="o_d_num">{{the_distance[idx]}}</text>
+    <text class="o_Step">{{the_array[idx].todaystep}}</text>
+    <text class="loveNum">{{the_lover_num[idx]}}</text>
+    <image src="{{the_loveImg[idx]}}" class="loveImg" data-oid="{{the_array[idx].openId}}" bindtap="bindlove"></image>
+  </view>
+</view>

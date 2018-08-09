@@ -1,0 +1,166 @@
+/* pages/person_sta/person_sta.wxss */
+page{
+  background-color: #e7e7e7;
+}
+.title{
+  height: 634rpx;
+  overflow: hidden;
+  position: relative;
+}
+.title .ImgUrl{
+  height: 638rpx;
+  width: 752rpx;
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+}
+.title .number{
+  position: absolute;
+  color: #fff;
+  height: 100%;
+  width: 100%;
+}
+.title .number text{
+  position: absolute; 
+  display: inline-block; 
+  letter-spacing: 2.1rpx
+}
+.title .number text:nth-of-type(1){
+  top: 366rpx;
+  left: 52rpx;
+}
+.title .number text:nth-of-type(2){
+  top: 202rpx;
+  left: 213rpx;
+}
+.title .number text:nth-of-type(3){
+  top: 366rpx;
+  right: 194rpx;
+}
+.title .number text:nth-of-type(4){
+  top: 202rpx;
+  right: 28rpx;
+}
+.title .statistics{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+
+}
+.title .statistics text{
+  position: absolute; 
+  height: 192rpx;
+  width: 60rpx;
+  background-color: #41E8A1;
+  display: inline-block; 
+  bottom: 0;
+  border-radius: 12rpx 12rpx 0 0;
+}
+.title .statistics text:nth-of-type(1){
+   left:  64rpx;
+   
+}
+.title .statistics text:nth-of-type(2){
+  left:  230rpx;
+  height: 356rpx;
+}
+.title .statistics text:nth-of-type(3){
+  right: 200rpx;
+}
+.title .statistics text:nth-of-type(4){
+  right: 48rpx;  
+  height: 356rpx;  
+}
+.center_box{
+  font-size: 24rpx;
+  color: #4c4c4c;
+  position: relative;
+  height: 100rpx;
+}
+.center_box text{
+  position: absolute;
+  top: 12rpx;
+}
+.center_box text:nth-of-type(1){
+  left: 34rpx;
+}
+.center_box text:nth-of-type(2){
+  left: 200rpx;
+}
+.center_box text:nth-of-type(3){
+  right: 170rpx;
+}
+.center_box text:nth-of-type(4){
+  right: 28rpx;
+}
+.HistoryStep{
+  height: 196rpx;
+  width: 690rpx;
+  margin-left: 30rpx;
+  box-sizing: border-box;
+  margin-bottom: 44rpx;
+  position: relative;
+}
+.HistoryStep view{
+  height: 96rpx;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 12rpx;
+}
+.HistoryStep .Steptime{
+  font-size: 36rpx;
+  position: relative;
+  line-height: 28rpx;
+}
+.HistoryStep .Steptime .time_left{
+  position: absolute;
+  top: 36rpx;
+  left: 32rpx;
+  width: 156rpx;
+  float: left;
+  
+}
+.HistoryStep .Steptime .time_right{
+  position: absolute;
+  top: 32rpx;
+  right: 66rpx;
+  float: left;
+  display: block;
+  font-size: 32rpx;
+}
+.HistoryStep .border{
+  height: 4rpx;
+  width: 100%;
+  position: absolute;
+  top: 94.4rpx;
+}
+.HistoryStep .Steptext{
+  position: relative;
+}
+.HistoryStep .Steptext .text_left{
+  float: left;
+  font-size: 28rpx;
+  position: absolute;
+  top: 28rpx;
+  left: 32rpx;
+  line-height: 36rpx;
+  color: #2C2C2C ;
+}
+.HistoryStep .Steptext .text_right{
+  float: left;
+  font-size: 36rpx;
+  position: absolute;
+  left: 378rpx;
+  top: 28rpx;
+  line-height: 36rpx;
+  color: #2C2C2C 
+}
+.HistoryStep .Steptext image{
+  float: right;
+  display: inline-block;
+  height: 70rpx;
+  width: 60rpx;
+  margin-top: 16rpx;
+  margin-right: 64rpx;
+}

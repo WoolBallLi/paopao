@@ -1,0 +1,34 @@
+<!-- <open-data type="groupName" open-gid="{{array[index].openGId}}"></open-data> -->
+<loading hidden="{{ loadingHidden }}">
+    加载中...
+</loading>
+<view class="myself">
+  <image src="{{Person.avatarUrl}}" class="myImg" bindtap="myuser"></image>
+  <view class="mystep">{{Mystep}}</view>
+  <view class="mystep_num">{{Person.todaystep}}</view>
+</view>
+<view class="comeback" hidden="{{hiddenCB}}" bindtap="comeback">
+  <image src="../../image/comeback.png"></image>
+  <text>回到首页</text>
+</view>
+<view hidden="{{hidden1}}">
+  <button class="button" style="border:none" open-type="share" data-id="Grank" id="rank">发起群挑战</button>
+  <view class="GroupBox">
+    <view class="Group" wx:for="{{Group}}" wx:for-index="idx" bindtap="lookGroup" data-idx="{{idx}}" data-GroupOid="{{Group[idx].openGId}}">
+      <view  class="GroupImg"  data-GroupOid="{{Group[idx].openGId}}">
+        <image src="{{GroupImgUser[idx][I_idx]}}" class="GroupImgUser" wx:for="{{GroupImgUser[idx]}}" wx:for-index="I_idx"></image>
+      </view>
+      <open-data type="groupName" open-gid="{{GroupOid[idx]}}" class="GroupName"  data-GroupOid="{{Group[idx].openGId}}"></open-data>
+      <text class="GroupRank"  data-GroupOid="{{Group[idx].openGId}}">{{MyRank[idx]}}</text>
+      <text class="GroupTime"  data-GroupOid="{{Group[idx].openGId}}" >{{GroupTime[idx]}}</text>
+    </view>
+  </view>
+</view>
+<view hidden="{{hidden2}}">
+  <view class="nodata">
+    <image src="../../image/nodataimg.png" class="noDataImg"></image>
+    <view class="noDataText">分享微信群加入群挑战</view>
+    <view class="noDataText">积极运动，夺取当日排行冠军吧</view>
+  </view>
+  <button class="button noDataButton" style="border:none" open-type="share" data-id="Grank" id="rank" style="border:none">发起群挑战</button>
+</view>
